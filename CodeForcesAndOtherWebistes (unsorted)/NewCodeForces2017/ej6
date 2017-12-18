@@ -1,0 +1,16 @@
+input_lines = """6 3"""
+
+recibir = True
+i__l = -1
+
+def get_input():
+	global i__l
+	if not recibir:
+		i__l += 1
+		return input_lines.splitlines()[i__l]
+	return raw_input()
+
+a, b = map(int,get_input().split())
+
+maximo = max(a,b) - 1
+
