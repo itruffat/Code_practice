@@ -1,3 +1,5 @@
+#https://techdevguide.withgoogle.com/paths/foundational/sequence-2/coding-question-minesweeper/#code-challenge
+
 from random import randrange
 
 class mineswipper:
@@ -37,7 +39,7 @@ class mineswipper:
 
 mine = mineswipper()
 
-mine.definetablesize(9,8)
+mine.definetablesize(10,8)
 
 mine.pickRandomBomb()
 mine.pickRandomBomb()
