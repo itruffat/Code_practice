@@ -1,0 +1,6 @@
+letras = ["DO","DO#", "RE", "RE#","MI","FA", "FA#","SOL","SOL#","LA", "LA#","SI"]
+
+dic = {}
+
+for x in range(len(letras)):
+	dic[letras[x]] = x
