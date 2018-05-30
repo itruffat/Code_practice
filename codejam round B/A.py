@@ -32,7 +32,8 @@ def file_iter(filepath = "input.txt"):
 
 #line = input_iter()
 line = string_iter()
-line = file_iter("A-small-attempt0.in")
+#line = file_iter("A-small-attempt0.in")
+#line = file_iter("A-largesmall-attempt0.in")
 
 fobject = None
 fobject = open(__script_path__ + filename + 'output.txt', 'w')
