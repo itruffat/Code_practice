@@ -1,0 +1,11 @@
+!*.zip
+!*.in
+!*.out
+!*.txt
+!*.cbp
+!*.depend
+!*.layout
+!*/bin
+!*/obj
+!*/_pycache_
+!*/__pycache__
