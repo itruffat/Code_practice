@@ -73,9 +73,9 @@ Everything seemed to point in the direction of a message that needed some "decry
 
 To have better understanding of how the pile evolved with different ESI values, I made two short Python programs: "Assembly code generator" and "QnD Intel8086". Feel free to look at their code and see what their do, but the TL;DR is that they both print the queue, one creates a program that does it natively in Assembly, the other one in Python3.
 
- * Assembly code generator: it actually goes deeper than this challenge, and allows us to quickly create and modify x86 Assembly code in code. The main goal of this program is to easily concatenate different parts of code, and to allow the user to repeat lines with slight modifications. As such, creating programs with unrooled loops becomes pretty trivial. Which is what I wanted to do to create the stack printer, since there is little space for errors by hardcoding every possible print output.
+ *PROGRAM ONE*: Assembly code generator. This program actually goes deeper than this challenge, and it allows us to quickly create and modify x86 Assembly code in code. The main goal here is to easily concatenate different pieces of code, and to allow the user to iterate lines, adding small modifications with each step. As such, using this tool to create programs with unrooled loops becomes pretty trivial. Which is what I wanted to do to create the stack printer, since there is little space for errors by hardcoding every possible print output.
 
- * QnD Intel8086: emulates the required instructions in Python, while trying to modularize everything. It's incredibly straightforward, but it will be incredibly useful in the next section, since it allows us to painlessly test multiple values of ESI. 
+ *PROGRAM TWO:* QnD Intel8086. This program emulates the required instructions in Python, while trying to modularize everything. It's incredibly straightforward, but it will be incredibly useful in the next section, since it allows us to painlessly test multiple values of ESI. 
 
 * Step 3:
 
