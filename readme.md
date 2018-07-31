@@ -1,4 +1,4 @@
-# Code Practice and Challenges
+# Coding Practice and Challenges
 
 After loosing two year's worth of competitive programming solutions (among other things) due to a disk-drive failure, it was time to back up what I had left. I decided to upload them to a Git Repository since they could be useful to anyone struggling with those problems.
 
